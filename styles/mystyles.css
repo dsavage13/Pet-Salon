@@ -1,0 +1,25 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+
+}
+
+img{
+    max-width: 100%;
+}
+/* Header */
+
+.site-init{
+    background-color: orange;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid-two-column{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

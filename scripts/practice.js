@@ -1,11 +1,11 @@
- //Object Literal
-let student1 = {
-    name:"John Smith",
-    age:99,
-    isAdmin:false,
-    grade1:3.7
-}
+console.log('Welcome to jquery library');
 
-console.log(student1.name);
-document.write(student1.name)
-//Object Constructive
+//=== ID ===
+//document.createElement('red'); //Java Script
+//  JQuery("#red");
+//$("#red"); // jQuery 
+
+// #id method key, value
+$('#red').css("color","red").css("background-color","black");
+$('#blue').css("color","blue");
+$('#pink').css("color","pink");

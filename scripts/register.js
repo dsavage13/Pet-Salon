@@ -79,6 +79,7 @@ function register(){
         //displayCards();
         displayTable(); 
         clearForm();
+        
     }else{
         console.log("Please Fill-In Highlighted Boxes")
     }
@@ -125,6 +126,7 @@ function init(){
     displayTotals();
     //displayCards();
     displayTable();
+    isValid(service);
 }
 
 window.onload=init; //wait to render the html

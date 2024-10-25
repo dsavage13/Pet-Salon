@@ -293,11 +293,54 @@ h2{
     margin-left: auto;
     margin-right: auto;
     width: 70%;
-    
+
 }
 
-.table{
+/* Services */
 
+.our-services{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+
+}
+
+.our-services img{
+    margin-bottom: 30px;
+}
+
+.our-services p{
+    margin-bottom: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    font-size: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #5e5e5e;
+}
+
+.description{
+    color: #5e5e5e;
+    margin-bottom: 50px;
+}
+
+/* About */
+
+.about-main{
+    color: #5e5e5e;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* Contact */
+.contact-text{
+    text-align: center;
+    color: #5e5e5e;
+    margin-right: auto;
+    margin-left: auto;
+    width: 85%;
+    margin-bottom: 70px;
 }
 
 /* Footer */

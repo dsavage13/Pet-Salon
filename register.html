@@ -21,6 +21,7 @@
         </div>
     </header>
     <main>
+        <button class="dark" id="dark">Dark Mode</button>
         <!--Registration Form-->
         <div class="form-container" id="register-form">
             <h2>Register a Pet</h2>
@@ -45,9 +46,6 @@
                 <label class="form-label" for="">Service:</label>
                 <select class="form-control" name="" id="txtService">
                     <option value="" disabled selected>--Select and option--</option>
-                    <option value="Grooming">Grooming</option>
-                    <option value="Nails">Nails</option>
-                    <option value="Vaccines">Vaccines</option>
                 </select>
             </div>
             <div class="mb-3">
@@ -72,8 +70,8 @@
                 </div>
             </div>
             <div class="container-sm">
-                <h2>Registered Pets</h2> 
-                <p>Total = <span id="total"></span></p>
+                <h2 id="register-total">Registered Pets</h2> 
+                <p id="totes">Total = <span id="total"></span></p>
             </div>
             <div id="pets">
                 <!--All the pets will be displayed here!-->
@@ -114,7 +112,9 @@
             </footer>
     </main>
 
-    
+    <script src="/scripts/storeManager.js"></script>
+    <script src="/plugins/JQuery3.7.1.js"></script>
+    <script src="./scripts/services.js"></script>
     <script src="./scripts/register.js"></script>
     <script src="./scripts/display.js"></script>
 </body>

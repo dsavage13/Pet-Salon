@@ -286,6 +286,20 @@ h2{
     background-color: rgb(222, 96, 96);
 }
 
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    
+}
+
+.table{
+
+}
+
 /* Footer */
 
     footer{
@@ -335,3 +349,12 @@ h2{
     text-decoration: underline;
     font-weight: bolder;
     }
+
+    /* Service */
+
+    .service-form{
+        margin: auto;
+        width: 40%;
+        margin-bottom: 250px;
+    }
+

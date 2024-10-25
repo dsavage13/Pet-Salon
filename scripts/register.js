@@ -101,6 +101,12 @@ function clearForm(){
     document.getElementById("txtTime").classList = "form-control"
     document.getElementById("txtContact").value = ''
     document.getElementById("txtContact").classList = "form-control"
+    
+    /*Service Buttons*/
+    document.getElementById("txtTitle").value = ''
+    document.getElementById("txtTitle").classList = "form-control"
+    document.getElementById("txtPrice").value = ''
+    document.getElementById("txtPrice").classList = "form-control"
 }
 
 function deletePet(petId){
@@ -113,6 +119,15 @@ function deletePet(petId){
 
 }
 
+function getServices(){
+    let services = read(); // this fn is under store manager
+    let option = "";
+    for(let i=0;i<services.length;i++){
+        let service = services[i];
+        option+=`<option value="${service.title}">${service.title}</option>`
+    }
+    $("#txtService").append(option);
+}
 
 
 function init(){
@@ -121,12 +136,35 @@ function init(){
     let pet2 = new Pet("Tigger",5,"Male","Labrador","Vaccines","Afternoon",);
     let pet3 = new Pet("Echo",6,"Female","Viszla","Nails","Evening",);
 
-    pets.push(pet1,pet2,pet3)
+    pets.push(pet1,pet2,pet3);
     console.log(pets);
     displayTotals();
     //displayCards();
+
+    getServices();
+    
+
+    $("#totes").hide();
+
+    $("#register-total").on('mouseover',function(){
+        $("#totes").slideDown("slow"); //slide toggle adds some animation to the toggle, slow makes it go slower
+    });
+
+    $("#register-total").on('mouseleave',function(){
+        $("#totes").slideUp("slow"); //slide toggle adds some animation to the toggle, slow makes it go slower
+    });
+
     displayTable();
-    isValid(service);
+
+    $("#dark").on('click',function (){
+        if($("body").css("background-color")==="rgb(0, 0, 0)"){
+            $("body").css("background-color","white");
+            $(this).text("Dark Mode");
+        }else{
+            $("body").css("background-color","black");
+            $(this).text("Light Mode"); 
+        }
+    });
 }
 
 window.onload=init; //wait to render the html

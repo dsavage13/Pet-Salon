@@ -1,9 +1,6 @@
-//Create another page named services.html
-//Create the constructor
-//Create validations
-//Clear the form after the registration
-
 //creating the constructor
+let services = [];
+
 function Service(title,price){
     this.title = title;
     this.price = price;
@@ -13,23 +10,15 @@ function isValid(service){
     let isValidPrice = true;
     if(service.title == ""){
         isValidTitle = false;
-        $("#txtTitle").removeClass("form-control");
-        $("#txtTitle").addClass("error");
         $(".titleValidationMsg").css("color","red").show();
     }else{
-        $("#txtTitle").addClass("form-control");
-        $("#txtTitle").removeClass("error");
         $(".titleValidationMsg").hide();
         isValidTitle = true;
     }
     if(service.price == ""){
         isValidPrice = false;
-        $("#txtPrice").removeClass("form-control");
-        $("#txtPrice").addClass("error");
         $(".priceValidationMsg").css("color","red").show();
     }else{
-        $("#txtPrice").addClass("form-control");
-        $("#txtPrice").removeClass("error");
         $(".priceValidationMsg").hide();
         isValidPrice = true;
     }
@@ -40,11 +29,11 @@ function register(){
     let inputTitle = $("#txtTitle").val();
     let inputPrice = $("#txtPrice").val();
     let newService = new Service(inputTitle,inputPrice);
-    console.log("Is valid? ", isValid(newService));
-    
-    if(isValid(newService)){
-        console.log(newService);
-        document.getElementById("txtService")=innerHTML('')
+
+    if(isValid(newService)==true){
+        services.push(newService);
+        save(newService);
+        displayService();
         //save(service)
     }
 }
@@ -58,6 +47,24 @@ function init(){
             register();
         }
     });
+    $( "#txtTitle" ).on( "keypress", function( event ) {
+        if (event.which == 13) {
+            register();
+        }
+    });
+
+    let service1 = new Service("Grooming",20);
+    let service2 = new Service("Nails",25);
+    let service3 = new Service("Vaccines",30);
+    services.push(service1,service2,service3);
+    displayService();
+}
+
+function clearForm(){
+    document.getElementById("txtTitle").value = ''
+    document.getElementById("txtTitle").classList = "form-control"
+    document.getElementById("txtPrice").value = ''
+    document.getElementById("txtPrice").classList = "form-control"
 }
 
 window.onload=init;

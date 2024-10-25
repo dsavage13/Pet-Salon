@@ -40,3 +40,19 @@
         }
         document.getElementById("petTable").innerHTML=table
     }
+
+    function displayService(){
+        let table="";
+        for(let i=0;i<services.length;i++){
+            let service=services[i];
+            table+=`
+                <tr>
+                    <td>${service.title}</td>
+                    <td>${service.price}</td>
+                    <td><buttton onClick="deletePet(${i})" class="btn btn-danger">Delete</buttton></td>
+                </tr>
+
+            `;
+        }
+        document.getElementById("servicesTable").innerHTML=table
+    }

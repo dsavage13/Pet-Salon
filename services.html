@@ -22,22 +22,58 @@
     </header>
 
     <main>
-        <h2>Register a new service</h2>
-
-        <div class="mb-3">
-            <label class="form-label">Title: </label>
-            <input type="text" class="form-control" id="txtTitle">
+        <h2 class="test">Register a new service</h2>
+        <div class="main-container">
+            <div class="service-form">
+                <div class="mb-3">
+                    <label class="form-label">Title: </label>
+                    <input type="text" class="form-control" id="txtTitle">
+                    <small class="titleValidationMsg">This is a Required Field</small>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Price: </label>
+                    <input type="text" class="form-control" id="txtPrice">
+                    <small class="priceValidationMsg">This is a Required Field</small>
+                </div>
+                <div>
+                    <button id="btnRegister" class="btn btn-primary">Register</button>
+                    <button id="btnClear" class="btn btn-primary" onclick="clearForm()">Clear Form</button>
+                </div>
+            </div>
+            <table class = table>
+                <thead>
+                    <th>Title:</th>
+                    <th>Service:</th>
+                </thead>
+                <tbody id="servicesTable">
+                    <!-- here the rows are displayed-->
+                </tbody>
+            </table>
         </div>
-        <div class="mb-3">
-            <label class="form-label">Price: </label>
-            <input type="text" class="form-control" id="txtPrice">
-        </div>
-        <div>
-            <button id="btnRegister" class="btn btn-primary">Register</button>
-        </div>
-
     </main>
+
+    <footer>
+        <h2>Pet Salon On Main</h2>
+        <div class="icons-list">
+            <div class="icon-container">
+                <i class="fa-brands fa-facebook-f"></i>
+            </div>
+            <div class="icon-container">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <div class="icon-container">
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+        <p>123 Main Street, City State, 12345</p>
+        <p>+1 (800) 867-5309</p>
+        <p>MAINSTPETS@PETSALON.COM</p>
+        <p>Copyright &copy; 2024 The Pet Salon - All Rights Reserved.</p>
+    </footer>
+
+    <script src="/scripts/display.js"></script>
     <script src="/scripts/services.js"></script>
+    <script src="/scripts/storeManager.js"></script>
     <script src="/plugins/JQuery3.7.1.js"></script>
 </body>
 </html>
